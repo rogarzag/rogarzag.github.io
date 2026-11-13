@@ -101,10 +101,10 @@
     .project-media.diagram { background: #fff; }
     .engagements { margin-top: 42px; }
     .engagements h3 { margin: 0 0 16px; font-size: 1.2rem; }
-    .engagement-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-    .engagement-card { background: #fff; border: 1px solid var(--line); border-radius: 15px; padding: 22px; }
+    .engagement-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    .engagement-card { display: grid; grid-template-columns: 150px minmax(220px, .8fr) 1.2fr; align-items: center; gap: 20px; background: #fff; border: 1px solid var(--line); border-radius: 15px; padding: 22px 25px; }
     .engagement-card small { color: var(--teal); font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
-    .engagement-card h4 { margin: 8px 0 6px; font-size: 1.04rem; }
+    .engagement-card h4 { margin: 0; font-size: 1.04rem; }
     .engagement-card p { color: var(--muted); margin: 0; font-size: .92rem; }
     .primary-experience { grid-column: 1 / -1; }
     .role-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 18px; }
@@ -160,6 +160,7 @@
       .skills { grid-template-columns: 1fr; }
       .skill-card:last-child { grid-column: auto; }
       .project-grid, .credentials-grid, .timeline, .engagement-grid, .role-list { grid-template-columns: 1fr; }
+      .engagement-card { grid-template-columns: 1fr; gap: 7px; }
       .primary-experience { grid-column: auto; }
       .contact-row { align-items: flex-start; flex-direction: column; }
     }
@@ -376,6 +377,7 @@
             <div class="tags"><span>Public Affairs</span><span>Politics</span><span>International Affairs</span><span>Spanish</span></div>
           </article>
         </div>
+        <p style="margin:22px 0 0;color:#617181;font-size:.9rem">Some original publisher pages are no longer available. Where applicable, publication records are linked through <a href="https://www.linkedin.com/in/rodrigogarzamx/details/publications/" target="_blank" rel="noopener" style="color:#087e83;font-weight:700">LinkedIn ↗</a>.</p>
         <div class="engagements">
           <h3>Selected Professional Engagements</h3>
           <div class="engagement-grid">
@@ -386,7 +388,6 @@
             </article>
           </div>
         </div>
-        <p style="margin:22px 0 0;color:#617181;font-size:.9rem">Some original publisher pages are no longer available. Where applicable, publication records are linked through <a href="https://www.linkedin.com/in/rodrigogarzamx/details/publications/" target="_blank" rel="noopener" style="color:#087e83;font-weight:700">LinkedIn ↗</a>.</p>
       </div>
     </section>
 
