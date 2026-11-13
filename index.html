@@ -3,9 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Rodrigo Garza García — Business Analysis, Strategy & Operations, and Data Analytics portfolio.">
+  <meta name="description" content="Rodrigo Garza García — Public & International Affairs, Government Relations, Business Analysis, Strategy & Operations, and Data Analytics.">
   <meta name="theme-color" content="#101d2d">
-  <title>Rodrigo Garza García | Business Analysis & Strategy</title>
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rodrigo Garza García | Professional Portfolio">
+  <meta property="og:description" content="Public & International Affairs · Government Relations · Business Analysis · Strategy & Operations · Data Analytics">
+  <meta property="og:url" content="https://rogarzag.github.io/">
+  <meta property="og:image" content="https://rogarzag.github.io/assets/8f8b0b3b7c941b6b.jpeg">
+  <link rel="canonical" href="https://rogarzag.github.io/">
+  <title>Rodrigo Garza García | Public Affairs, Business Analysis & Strategy</title>
   <style>
     :root {
       --ink: #172638;
@@ -90,6 +97,21 @@
     .projects { background: #edf2f3; }
     .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
     .project { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 25px; display: flex; flex-direction: column; min-height: 100%; box-shadow: 0 10px 30px rgba(20,39,56,.045); }
+    .project-media { display: block; width: 100%; height: 190px; object-fit: contain; background: #f5f8f9; border: 1px solid var(--line); border-radius: 12px; margin: 0 0 17px; }
+    .project-media.diagram { background: #fff; }
+    .engagements { margin-top: 42px; }
+    .engagements h3 { margin: 0 0 16px; font-size: 1.2rem; }
+    .engagement-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .engagement-card { background: #fff; border: 1px solid var(--line); border-radius: 15px; padding: 22px; }
+    .engagement-card small { color: var(--teal); font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .engagement-card h4 { margin: 8px 0 6px; font-size: 1.04rem; }
+    .engagement-card p { color: var(--muted); margin: 0; font-size: .92rem; }
+    .primary-experience { grid-column: 1 / -1; }
+    .role-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 18px; }
+    .role-item { border-left: 3px solid var(--teal); padding: 2px 0 2px 15px; }
+    .role-item h4 { margin: 0 0 3px; font-size: .98rem; }
+    .role-item .meta { color: var(--teal); font-size: .8rem; font-weight: 750; margin-bottom: 7px; }
+    .role-item p { color: var(--muted); margin: 0; font-size: .9rem; }
     .project-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 13px; }
     .type { color: var(--teal); background: var(--teal-soft); border-radius: 99px; padding: 4px 10px; font-size: .72rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
     .project h3 { font-size: 1.22rem; line-height: 1.25; margin: 0 0 9px; }
@@ -132,7 +154,8 @@
       .hero-photo { justify-self: center; margin-top: 10px; }
       section { padding: 60px 0; }
       .skills { grid-template-columns: 1fr; }
-      .project-grid, .credentials-grid, .timeline { grid-template-columns: 1fr; }
+      .project-grid, .credentials-grid, .timeline, .engagement-grid, .role-list { grid-template-columns: 1fr; }
+      .primary-experience { grid-column: auto; }
       .contact-row { align-items: flex-start; flex-direction: column; }
     }
     @media (max-width: 430px) {
@@ -227,7 +250,8 @@
         </div>
         <div class="project-grid">
           <article class="project">
-            <div class="project-top"><span class="type">Business Analysis</span><span aria-hidden="true">01</span></div>
+            <div class="project-top"><span class="type">IBM Business Analysis</span><span aria-hidden="true">01</span></div>
+            <img class="project-media diagram" src="https://raw.githubusercontent.com/rogarzag/business-process-mapping-quickservice-delivery/main/diagrams/QuickService%20Delivery%20%E2%80%93%20Order%20Management%20Process%20Flowchart.png" alt="QuickService Delivery order management process flowchart created in Lucidchart" loading="lazy">
             <h3>QuickService Delivery — Order Management Process</h3>
             <p>Mapped an end-to-end food and grocery order workflow, clarifying participants, responsibilities, handoffs, decision points, and exception paths.</p>
             <div class="result"><strong>Focus:</strong> make the process visible, identify control points, and clarify how an order moves from placement to fulfillment.</div>
@@ -235,7 +259,8 @@
             <div class="project-links"><a href="https://github.com/rogarzag/business-process-mapping-quickservice-delivery" target="_blank" rel="noopener">Repository ↗</a><a href="https://lucid.app/lucidchart/36c1ae40-1a47-4819-805f-63889a5205e3/edit?viewport_loc=-957%2C873%2C2289%2C1675%2C0_0&invitationId=inv_33bdba97-f296-4e62-a267-c171659295b9" target="_blank" rel="noopener">Lucidchart ↗</a></div>
           </article>
           <article class="project">
-            <div class="project-top"><span class="type">Business Analysis</span><span aria-hidden="true">02</span></div>
+            <div class="project-top"><span class="type">IBM Business Analysis</span><span aria-hidden="true">02</span></div>
+            <img class="project-media diagram" src="https://raw.githubusercontent.com/rogarzag/business-analysis-use-case-modeling/main/diagrams/news-channel-use-case-original.png" alt="News Channel Program UML use case diagram created in Lucidchart" loading="lazy">
             <h3>News Channel Program — UML Use Case Modeling</h3>
             <p>Identified five actors and six use cases for a live news broadcasting system, documenting responsibilities and interactions in a UML use case diagram.</p>
             <div class="result"><strong>Focus:</strong> define system scope and make stakeholder interactions explicit before solution design.</div>
@@ -243,7 +268,8 @@
             <div class="project-links"><a href="https://github.com/rogarzag/business-analysis-use-case-modeling" target="_blank" rel="noopener">Repository ↗</a><a href="https://lucid.app/lucidchart/7390e644-b2a4-4605-9f86-4769b1048ace/edit?viewport_loc=-1254%2C-430%2C3877%2C2181%2C0_0&invitationId=inv_35b30263-e9a3-411a-b19a-b6acc66fbd94" target="_blank" rel="noopener">Lucidchart ↗</a></div>
           </article>
           <article class="project">
-            <div class="project-top"><span class="type">Data Analytics</span><span aria-hidden="true">03</span></div>
+            <div class="project-top"><span class="type">TripleTen · Data Analytics</span><span aria-hidden="true">03</span></div>
+            <img class="project-media" src="https://raw.githubusercontent.com/rogarzag/rappiplus-business-performance-analysis/main/images/executive_overview.png" alt="RappiPlus executive business performance dashboard" loading="lazy">
             <h3>RappiPlus — Business Performance Analysis</h3>
             <p>Analyzed revenue, product-level profit, checkout conversion, customer retention, data quality, and an A/B test using Python, SQL, statistics, and Tableau.</p>
             <div class="result"><strong>Finding:</strong> adjusted revenue was $9.64M; the checkout experiment did not show a statistically significant conversion improvement.</div>
@@ -251,7 +277,8 @@
             <div class="project-links"><a href="https://github.com/rogarzag/rappiplus-business-performance-analysis" target="_blank" rel="noopener">Repository ↗</a><a href="https://public.tableau.com/views/RappiPlusBusinessPerformanceDashboard/RappiPlusBusinessPerformanceStory?:language=es-ES&:display_count=n&:origin=viz_share_link" target="_blank" rel="noopener">Tableau dashboard ↗</a></div>
           </article>
           <article class="project">
-            <div class="project-top"><span class="type">Data Analytics</span><span aria-hidden="true">04</span></div>
+            <div class="project-top"><span class="type">TripleTen · Data Analytics</span><span aria-hidden="true">04</span></div>
+            <img class="project-media" src="https://raw.githubusercontent.com/rogarzag/andes-capital-real-estate-analysis/main/images/executive-overview.png" alt="Andes Capital executive real estate dashboard" loading="lazy">
             <h3>Andes Capital — Real Estate Analysis</h3>
             <p>Explored revenue, sales channels, property types, customer segments, geography, and repeat purchasing through an interactive Tableau story.</p>
             <div class="result"><strong>Finding:</strong> the analysis covered $6.01B in revenue and 8,500 sales; Brokers accounted for approximately 73% of revenue.</div>
@@ -259,7 +286,8 @@
             <div class="project-links"><a href="https://github.com/rogarzag/andes-capital-real-estate-analysis" target="_blank" rel="noopener">Repository ↗</a><a href="https://public.tableau.com/views/AndesCapitalRealEstateDashboard/AndesCapitalRealEstateAnalysis?:language=es-ES&:display_count=n&:origin=viz_share_link" target="_blank" rel="noopener">Tableau dashboard ↗</a></div>
           </article>
           <article class="project">
-            <div class="project-top"><span class="type">Data Analytics</span><span aria-hidden="true">05</span></div>
+            <div class="project-top"><span class="type">TripleTen · Data Analytics</span><span aria-hidden="true">05</span></div>
+            <img class="project-media" src="https://raw.githubusercontent.com/rogarzag/andes-retail-commercial-performance/main/Overview.png" alt="Andes Retail commercial performance dashboard overview" loading="lazy">
             <h3>Andes Retail — Commercial Performance</h3>
             <p>Compared 2024–2025 sales, margin, orders, customer segments, product categories, geography, and seasonality in an interactive dashboard.</p>
             <div class="result"><strong>Finding:</strong> revenue declined 6.8% in 2025, alongside fewer orders and lower average order value.</div>
@@ -267,7 +295,8 @@
             <div class="project-links"><a href="https://github.com/rogarzag/andes-retail-commercial-performance" target="_blank" rel="noopener">Repository ↗</a><a href="https://public.tableau.com/app/profile/rodrigo.garza.garcia/viz/Andes_Retail_Commercial_Performance_2024_2025/Dashboard-Overview" target="_blank" rel="noopener">Tableau dashboard ↗</a></div>
           </article>
           <article class="project">
-            <div class="project-top"><span class="type">Data Analytics</span><span aria-hidden="true">06</span></div>
+            <div class="project-top"><span class="type">TripleTen · Data Analytics</span><span aria-hidden="true">06</span></div>
+            <img class="project-media" src="https://raw.githubusercontent.com/rogarzag/mercadolibre-funnel-retention-analysis/main/images/01_executive_summary.png" alt="MercadoLibre conversion funnel and retention analysis executive summary" loading="lazy">
             <h3>MercadoLibre — Funnel &amp; Retention Analysis</h3>
             <p>Analyzed the conversion funnel and D7, D14, D21, and D28 retention across ten Latin American countries using SQL.</p>
             <div class="result"><strong>Focus:</strong> identify where users leave the funnel and how retention changes after the first week.</div>
@@ -337,7 +366,22 @@
             <div class="project-links"><a href="https://www.linkedin.com/in/rodrigogarzamx/details/publications/" target="_blank" rel="noopener">Publication record ↗</a></div>
           </article>
         </div>
-        <p style="margin:22px 0 0;color:#617181;font-size:.9rem">View the complete publication record on <a href="https://www.linkedin.com/in/rodrigogarzamx/details/publications/" target="_blank" rel="noopener" style="color:#087e83;font-weight:700">LinkedIn ↗</a>.</p>
+        <div class="engagements">
+          <h3>Selected Professional Engagements</h3>
+          <div class="engagement-grid">
+            <article class="engagement-card">
+              <small>Columnist · October 2016 – May 2017</small>
+              <h4>Milenio Estado de México</h4>
+              <p>Wrote a biweekly column on public affairs, politics, and international issues for the newspaper's Estado de México edition.</p>
+            </article>
+            <article class="engagement-card">
+              <small>Speaker · 2020</small>
+              <h4>National Defense College of Mexico</h4>
+              <p>Participated as a speaker in an academic forum, sharing analysis related to international affairs and national security.</p>
+            </article>
+          </div>
+        </div>
+        <p style="margin:22px 0 0;color:#617181;font-size:.9rem">Some original publisher pages are no longer available. Where applicable, publication records are linked through <a href="https://www.linkedin.com/in/rodrigogarzamx/details/publications/" target="_blank" rel="noopener" style="color:#087e83;font-weight:700">LinkedIn ↗</a>.</p>
       </div>
     </section>
 
@@ -349,9 +393,35 @@
           <p class="section-intro">A career across Mexico's foreign service and public institutions, with responsibilities in international affairs, strategic coordination, and executive support.</p>
         </div>
         <div class="timeline">
-          <article class="timeline-item"><h3>Mexico's Ministry of Foreign Affairs</h3><div class="meta">2018–2025 · Office of the Chief of Staff to the Secretary of Foreign Affairs</div><p>Held progressively senior roles in the Office of the Chief of Staff to the Secretary of Foreign Affairs, from Advisor and Senate Liaison to Deputy Director and Director of Programs and Institutional Information; served as Acting Director General from October 2024 to April 2025. Supported the Secretary's priorities through executive reporting, briefings, and institutional follow-up, coordinating inputs from more than 15 internal areas and liaising with the Presidency, the Federal Public Administration, and Congress. Contributed to national planning, sectoral program monitoring, audit coordination, and performance reporting, including consolidating information from 27 responsible units for the Results Indicator Matrix (MIR) of a budget program. Also coordinated reports and work programs for more than 160 Mexican missions abroad.</p></article>
-          <article class="timeline-item"><h3>Government of the State of Mexico</h3><div class="meta">2015–2017 · International Affairs Coordination</div><p>Advised on the governor's international agenda, prepared background materials for bilateral and multilateral meetings, and coordinated approximately ten international visits, including protocol, logistics, and English–Spanish interpretation.</p></article>
-          <article class="timeline-item"><h3>Embassy of Mexico in Brazil</h3><div class="meta">2014 · Brasília · Professional Internship</div><p>Supported information tracking, diplomatic activities, cultural events, and local-government liaison work in the Political Section.</p></article>
+          <article class="timeline-item primary-experience">
+            <h3>Mexico's Ministry of Foreign Affairs</h3>
+            <div class="meta">February 2018 – April 2025 · Office of the Chief of Staff to the Secretary of Foreign Affairs</div>
+            <p>More than seven years supporting the Secretary's priorities and decision-making through strategic planning, executive reporting, inter-agency coordination, government and legislative relations, and institutional follow-up.</p>
+            <div class="role-list">
+              <div class="role-item">
+                <h4>Acting Director General of Programs and Institutional Information</h4>
+                <div class="meta">17 October 2024 – 30 April 2025 · Acting assignment concurrent with Director role</div>
+                <p>Coordinated the Ministry's contribution to the 2025–2030 National Development Plan and the consolidation of 2024 activity reports and 2025 work programs for more than 160 Mexican missions abroad.</p>
+              </div>
+              <div class="role-item">
+                <h4>Director of Programs and Institutional Information</h4>
+                <div class="meta">February 2023 – April 2025</div>
+                <p>Coordinated inputs from more than 15 areas for four government management reports; consolidated sectoral program progress and indicators; and handled institutional requirements, audits, and transparency follow-up.</p>
+              </div>
+              <div class="role-item">
+                <h4>Deputy Director of Information and Institutional Liaison</h4>
+                <div class="meta">February 2019 – February 2023</div>
+                <p>Supported foreign policy planning and sectoral program monitoring; integrated performance information from 27 responsible units for a budget program's Results Indicator Matrix (MIR); coordinated inputs for government and activity reports.</p>
+              </div>
+              <div class="role-item">
+                <h4>Advisor and Liaison to the Senate of the Republic</h4>
+                <div class="meta">February 2018 – November 2018</div>
+                <p>Prepared international analysis and decision-support materials, monitored Senate resolutions and committee work, and liaised with national security institutions.</p>
+              </div>
+            </div>
+          </article>
+          <article class="timeline-item"><h3>Government of the State of Mexico</h3><div class="meta">January 2015 – February 2017 · International Affairs Coordination</div><p>Advised on the governor's international agenda, prepared background materials for bilateral and multilateral meetings, and coordinated approximately ten international visits, including protocol, logistics, and English–Spanish interpretation.</p></article>
+          <article class="timeline-item"><h3>Embassy of Mexico in Brazil</h3><div class="meta">June – August 2014 · Brasília · Professional Internship</div><p>Completed an internship in the Political Section, supporting information tracking, diplomatic activities, cultural events, and local-government liaison work.</p></article>
         </div>
       </div>
     </section>
@@ -377,7 +447,8 @@
             <article class="credential"><small>Bootcamp · Completed</small><h3>Data Analyst Bootcamp</h3><p>TripleTen · 2026</p></article>
             <article class="credential"><small>Diploma</small><h3>Public Policy and Evaluation</h3><p>Center for Research and Teaching in Economics (CIDE) · 2016</p></article>
             <article class="credential"><small>Specialized Course</small><h3>Introductory Course on National Security</h3><p>National Defense College and Naval Higher Studies Center · 2019</p></article>
-            <article class="credential"><small>Professional Course</small><h3>English for Tech Professionals</h3><p>University of Arizona · 2026</p></article>
+            <article class="credential"><small>Professional Course</small><h3>English Communication for Tech Professionals</h3><p>University of Arizona · 2026</p></article>
+            <article class="credential"><small>Professional Course</small><h3>Protocol and Ceremonial</h3><p>Matías Romero Institute · 2016</p></article>
           </div>
         </div>
       </div>
@@ -386,7 +457,7 @@
     <section class="contact" id="contact">
       <div class="wrap contact-row">
         <div>
-          <div class="kicker">06 / Contact</div>
+          <div class="kicker">07 / Contact</div>
           <h2>Let's connect.</h2>
           <p class="section-intro">Open to opportunities in public and international affairs, government relations, Business Analysis, Strategy &amp; Operations, and Data Analytics.</p>
         </div>
@@ -394,6 +465,7 @@
           <a class="btn btn-primary" href="https://www.linkedin.com/in/rodrigogarzamx/" target="_blank" rel="noopener">LinkedIn ↗</a>
           <a class="btn btn-outline" href="https://github.com/rogarzag" target="_blank" rel="noopener">GitHub ↗</a>
           <a class="btn btn-outline" href="https://public.tableau.com/app/profile/rodrigo.garza.garcia" target="_blank" rel="noopener">Tableau Public ↗</a>
+          <a class="btn btn-outline" href="mailto:rogarzag@gmail.com">Email ↗</a>
         </div>
       </div>
     </section>
