@@ -61,10 +61,11 @@
     .btn:hover { transform: translateY(-2px); }
     .btn-primary { color: #102433; background: #91ded5; }
     .btn-outline { border: 1px solid rgba(255,255,255,.35); color: white; }
-    .hero-mark { justify-self: end; width: min(250px, 100%); aspect-ratio: 1; border-radius: 50%; border: 1px solid rgba(144,222,213,.42); display: grid; place-items: center; position: relative; }
-    .hero-mark:before, .hero-mark:after { content: ""; position: absolute; border: 1px solid rgba(144,222,213,.25); border-radius: 50%; inset: 17px; }
-    .hero-mark:after { inset: 36px; }
-    .monogram { font-size: 4.2rem; font-weight: 300; letter-spacing: -.08em; color: #a8e8e0; z-index: 1; }
+    .hero-photo { justify-self: end; width: min(250px, 100%); aspect-ratio: 1; position: relative; display: grid; place-items: center; }
+    .hero-photo:before, .hero-photo:after { content: ""; position: absolute; border: 1px solid rgba(144,222,213,.25); border-radius: 50%; }
+    .hero-photo:before { inset: 0; }
+    .hero-photo:after { inset: 17px; }
+    .hero-photo img { width: 204px; height: 204px; object-fit: cover; object-position: center 38%; border-radius: 50%; border: 4px solid rgba(145,222,213,.85); box-shadow: 0 18px 40px rgba(0,0,0,.28); position: relative; z-index: 1; }
     .focus { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 28px; }
     .focus span { color: #d7e9e8; border: 1px solid rgba(180,220,218,.25); padding: 5px 11px; border-radius: 99px; font-size: .82rem; }
     section { padding: 78px 0; }
@@ -125,7 +126,7 @@
       .brand { font-size: .9rem; }
       .hero { padding: 70px 0 66px; }
       .hero-grid, .about-grid { grid-template-columns: 1fr; }
-      .hero-mark { display: none; }
+      .hero-photo { justify-self: center; margin-top: 10px; }
       section { padding: 60px 0; }
       .skills { grid-template-columns: 1fr; }
       .project-grid, .credentials-grid, .timeline { grid-template-columns: 1fr; }
@@ -168,7 +169,7 @@
             <span>Business Analysis</span><span>Process Mapping</span><span>Data Analytics</span><span>Strategic Planning</span>
           </div>
         </div>
-        <div class="hero-mark" aria-hidden="true"><div class="monogram">RG</div></div>
+        <div class="hero-photo"><img src="assets/8f8b0b3b7c941b6b.jpeg" alt="Rodrigo Garza García"></div>
       </div>
     </section>
 
