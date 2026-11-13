@@ -89,7 +89,7 @@
     .fact:last-child { border: 0; padding-bottom: 0; }
     .fact strong { display: block; color: var(--ink); font-size: .94rem; }
     .fact span { color: var(--muted); font-size: .91rem; }
-    .skills { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; align-items: stretch; }
+    .skills { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; align-items: stretch; }
     .skill-card { background: var(--white); border: 1px solid var(--line); border-radius: 15px; padding: 23px; height: 100%; }
     .skill-card .num { color: var(--teal); font-size: .78rem; font-weight: 800; letter-spacing: .12em; }
     .skill-card h3 { margin: 8px 0 7px; font-size: 1.08rem; }
@@ -145,7 +145,6 @@
     footer .wrap { display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; }
     @media (max-width: 980px) {
       .skills { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .skill-card:last-child { grid-column: 1 / -1; }
     }
     @media (max-width: 760px) {
       .wrap { width: min(100% - 32px, var(--max)); }
@@ -211,7 +210,7 @@
       <div class="wrap">
         <div class="section-head">
           <div class="kicker">01 / About</div>
-          <h2>Public affairs and strategy, grounded in experience.</h2>
+          <h2>Public &amp; international affairs, complemented by business analysis.</h2>
           <p class="section-intro">A decade of public-sector experience, complemented by analytical and business analysis capabilities.</p>
         </div>
         <div class="about-grid">
