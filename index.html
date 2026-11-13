@@ -105,6 +105,9 @@
     .credential small { color: var(--teal); font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
     .credential h3 { margin: 8px 0 5px; font-size: 1.05rem; }
     .credential p { color: var(--muted); margin: 0; font-size: .92rem; }
+    .education-group { margin-top: 30px; }
+    .education-heading { margin: 0 0 15px; font-size: 1.12rem; color: var(--ink); }
+    .education-group + .education-group { margin-top: 34px; }
     .background { background: #fff; }
     .timeline { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
     .timeline-item { padding: 23px; border: 1px solid var(--line); border-radius: 15px; }
@@ -148,7 +151,8 @@
         <a href="#expertise">Expertise</a>
         <a href="#projects">Projects</a>
         <a href="#publications">Publications</a>
-        <a href="#experience">Background</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </div>
     </nav>
@@ -337,27 +341,44 @@
       </div>
     </section>
 
-    <section id="experience">
+    <section id="experience" class="background">
       <div class="wrap">
         <div class="section-head">
-          <div class="kicker">05 / Background</div>
-          <h2>Professional experience &amp; education.</h2>
-          <p class="section-intro">A foundation in international affairs and public administration, complemented by applied training in business and data analysis.</p>
+          <div class="kicker">05 / Professional Experience</div>
+          <h2>Professional experience.</h2>
+          <p class="section-intro">A career across Mexico's foreign service and public institutions, with responsibilities in international affairs, strategic coordination, and executive support.</p>
         </div>
         <div class="timeline">
           <article class="timeline-item"><h3>Mexico's Ministry of Foreign Affairs</h3><div class="meta">2018–2025 · Office of the Chief of Staff to the Secretary of Foreign Affairs</div><p>Held progressively senior roles in the Office of the Chief of Staff to the Secretary of Foreign Affairs, from Advisor and Senate Liaison to Deputy Director and Director of Programs and Institutional Information; served as Acting Director General from October 2024 to April 2025. Supported the Secretary's priorities through executive reporting, briefings, and institutional follow-up, coordinating inputs from more than 15 internal areas and liaising with the Presidency, the Federal Public Administration, and Congress. Contributed to national planning, sectoral program monitoring, audit coordination, and performance reporting, including consolidating information from 27 responsible units for the Results Indicator Matrix (MIR) of a budget program. Also coordinated reports and work programs for more than 160 Mexican missions abroad.</p></article>
           <article class="timeline-item"><h3>Government of the State of Mexico</h3><div class="meta">2015–2017 · International Affairs Coordination</div><p>Advised on the governor's international agenda, prepared background materials for bilateral and multilateral meetings, and coordinated approximately ten international visits, including protocol, logistics, and English–Spanish interpretation.</p></article>
-          <article class="timeline-item"><h3>Embassy of Mexico in Brazil</h3><div class="meta">2014 · Brasília · Professional Internship</div><p>Supported information tracking, diplomatic activities, cultural events, and local-government liaison work.</p></article>
-          <article class="timeline-item"><h3>TripleTen — Data Analyst Bootcamp</h3><div class="meta">Completed · 2026</div><p>Applied training in SQL, Python, Excel, statistics, data visualization, and business-focused analytical projects.</p></article>
-          <article class="timeline-item"><h3>IBM — Business Analyst Professional Certificate</h3><div class="meta">In progress · 2026</div><p>Professional training in business analysis, requirements, process modeling, stakeholder engagement, Agile, and solution evaluation.</p></article>
+          <article class="timeline-item"><h3>Embassy of Mexico in Brazil</h3><div class="meta">2014 · Brasília · Professional Internship</div><p>Supported information tracking, diplomatic activities, cultural events, and local-government liaison work in the Political Section.</p></article>
         </div>
-        <div class="credentials-grid" style="margin-top:18px">
-          <article class="credential"><small>Education</small><h3>Master's in Public Administration</h3><p>Universidad del Valle de México (UVM) · With honors</p></article>
-          <article class="credential"><small>Education</small><h3>Bachelor's in International Relations</h3><p>Universidad Iberoamericana</p></article>
-          <article class="credential"><small>Public policy</small><h3>Diploma in Public Policy and Evaluation</h3><p>Center for Research and Teaching in Economics (CIDE) · 2016</p></article>
-          <article class="credential"><small>National security</small><h3>Introductory Course on National Security</h3><p>National Defense College and Naval Higher Studies Center · 2019</p></article>
-          <article class="credential"><small>Additional training</small><h3>English for Tech Professionals</h3><p>University of Arizona · 2026</p></article>
-          <article class="credential"><small>Tools &amp; methods</small><h3>Analytical &amp; business toolkit</h3><p>SQL · Python · Tableau · Excel · Jira · Confluence · Lucidchart</p></article>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">06 / Education &amp; Professional Development</div>
+          <h2>Education &amp; professional development.</h2>
+          <p class="section-intro">Formal academic degrees, specialized programs, and professional training that complement my experience in public and international affairs, strategy, and analysis.</p>
+        </div>
+        <div class="education-group">
+          <h3 class="education-heading">Academic Education</h3>
+          <div class="credentials-grid">
+            <article class="credential"><small>Master's Degree</small><h3>Master's in Public Administration</h3><p>Universidad del Valle de México (UVM) · With honors</p></article>
+            <article class="credential"><small>Bachelor's Degree</small><h3>Bachelor's in International Relations</h3><p>Universidad Iberoamericana</p></article>
+          </div>
+        </div>
+        <div class="education-group">
+          <h3 class="education-heading">Professional Training &amp; Certificates</h3>
+          <div class="credentials-grid">
+            <article class="credential"><small>Professional Certificate · In progress</small><h3>IBM Business Analyst Professional Certificate</h3><p>IBM · Coursera · 2026</p></article>
+            <article class="credential"><small>Bootcamp · Completed</small><h3>Data Analyst Bootcamp</h3><p>TripleTen · 2026</p></article>
+            <article class="credential"><small>Diploma</small><h3>Public Policy and Evaluation</h3><p>Center for Research and Teaching in Economics (CIDE) · 2016</p></article>
+            <article class="credential"><small>Specialized Course</small><h3>Introductory Course on National Security</h3><p>National Defense College and Naval Higher Studies Center · 2019</p></article>
+            <article class="credential"><small>Professional Course</small><h3>English for Tech Professionals</h3><p>University of Arizona · 2026</p></article>
+          </div>
         </div>
       </div>
     </section>
