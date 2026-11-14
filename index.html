@@ -124,9 +124,11 @@
     .project-links a:hover { text-decoration: underline; }
     .credentials-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
     .credential { border: 1px solid var(--line); border-radius: 15px; padding: 23px; background: white; }
+    .credential.featured { grid-column: 1 / -1; }
     .credential small { color: var(--teal); font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
     .credential h3 { margin: 8px 0 5px; font-size: 1.05rem; }
     .credential p { color: var(--muted); margin: 0; font-size: .92rem; }
+    .credential p + p { margin-top: 9px; }
     .education-group { margin-top: 30px; }
     .education-heading { margin: 0 0 15px; font-size: 1.12rem; color: var(--ink); }
     .education-group + .education-group { margin-top: 34px; }
@@ -447,6 +449,7 @@
         <div class="education-group">
           <h3 class="education-heading">Professional Training &amp; Certificates</h3>
           <div class="credentials-grid">
+            <article class="credential featured"><small>Professional Certification · AI Interview Assessment</small><h3>micro1 AI Interview Certification — Outstanding Performance</h3><p>micro1 · November 2026</p><p>Recognizes outstanding performance in micro1's AI interview. Certified skill areas include geopolitical risk and national security; international relations and regional security; geopolitical risk assessment and strategic forecasting; foreign policy analysis and strategic decision-making; strategic reporting and executive advisory communication; business domain knowledge; data quality assurance; data management; and process optimization.</p><p>Member of micro1's Certified Talent Pool, with a profile considered for matching to relevant projects and roles.</p></article>
             <article class="credential"><small>Professional Certificate · In progress</small><h3>IBM Business Analyst Professional Certificate</h3><p>IBM · Coursera · 2026</p></article>
             <article class="credential"><small>Bootcamp · Completed</small><h3>Data Analyst Bootcamp</h3><p>TripleTen · 2026</p></article>
             <article class="credential"><small>Diploma</small><h3>Public Policy and Evaluation</h3><p>Center for Research and Teaching in Economics (CIDE) · 2016</p></article>
