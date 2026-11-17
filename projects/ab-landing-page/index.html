@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A/B Landing Page Experiment | Rodrigo Garza García</title>
+<meta name="description" content="Statistical evaluation of two landing page versions across 40,000 observations, comparing conversion, average spending and categorical associations.">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#172638;font:17px/1.65 system-ui,sans-serif}
+main{max-width:1000px;margin:auto;padding:40px 24px 72px}a{color:#087e83;text-underline-offset:4px}
+a:focus-visible{outline:3px solid #087e83;outline-offset:5px}
+header{border-bottom:1px solid #dfe6e9;padding-bottom:30px}
+h1{font-size:clamp(2rem,6vw,3.3rem);line-height:1.1;margin:18px 0 12px;letter-spacing:-.025em}
+h2{font-size:1.55rem;line-height:1.3;margin:42px 0 14px}
+h3{font-size:1.12rem;margin:0 0 8px}
+p{margin:0 0 14px}.meta,.muted,figcaption{color:#5e6d7d}
+.subtitle{font-size:1.15rem;font-weight:650;margin-bottom:14px}.intro{font-size:1.06rem;max-width:850px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.button{display:inline-block;padding:10px 16px;border:1px solid #087e83;border-radius:8px;text-decoration:none;font-weight:650;font-size:.93rem}
+.button.primary{background:#087e83;color:white}
+.back{font-size:.93rem;text-decoration:none}
+.metric-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:12px;margin:20px 0}
+.metric{background:white;border:1px solid #dfe6e9;border-radius:12px;padding:16px}
+.metric strong{display:block;font-size:1.45rem;line-height:1.2;color:#087e83;margin-bottom:5px}
+.metric span{font-size:.88rem;color:#536475}
+table{border-collapse:collapse;width:100%;font-size:.94rem;margin:16px 0 24px}
+td,th{padding:11px 13px;text-align:left;border:1px solid #dfe6e9;vertical-align:top}
+th{background:#e4f3f1;font-weight:700}
+figure{margin:22px 0;padding:18px;background:white;border:1px solid #dfe6e9;border-radius:12px}
+figure img{display:block;max-width:100%;max-height:650px;height:auto;margin:12px auto;object-fit:contain}
+figure a{display:block}
+figcaption{font-size:.9rem;margin-top:10px}
+.figure-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.figure-grid figure{margin:0}.figure-grid img{width:100%}
+ul,ol{padding-left:23px;margin:10px 0 18px}
+li{margin:5px 0}
+.note{background:#eef3f5;border-left:3px solid #8aa0ad;padding:13px 16px;border-radius:0 8px 8px 0;font-size:.93rem}
+.links{display:flex;flex-wrap:wrap;gap:10px 18px;margin:12px 0 20px}
+.links a{font-weight:650;text-decoration:none}.links a:hover{text-decoration:underline}
+footer{margin-top:44px;border-top:1px solid #dfe6e9;padding-top:22px}
+@media(max-width:650px){main{padding:25px 17px 56px}.figure-grid{grid-template-columns:1fr}td,th{padding:8px;font-size:.88rem}figure{padding:11px}}
+</style></head><body><main>
+<header>
+<a class="back" href="../../#projects">← Back to selected projects</a>
+<p class="meta">TripleTen Data Analyst Bootcamp · Python · Experiment Analysis · Rodrigo Garza García</p>
+<h1>A/B Landing Page Experiment</h1><p class="subtitle">Conversion, Spending and Statistical Hypothesis Testing</p>
+<p class="intro">Evaluated two landing page versions, A and B, using 40,000 user observations. The analysis compares conversion and average spending among converted users, then tests whether conversion is associated with traffic source or user type.</p>
+<div class="actions"><a class="button primary" href="https://github.com/rogarzag/ab-landing-page-experiment" target="_blank" rel="noopener">Open GitHub repository ↗</a><a class="button primary" href="https://github.com/rogarzag/ab-landing-page-experiment/blob/main/ab_landing_page_experiment.ipynb" target="_blank" rel="noopener">Open Jupyter notebook ↗</a><a class="button" href="https://github.com/rogarzag/ab-landing-page-experiment/blob/main/data/landing_experiment.csv" target="_blank" rel="noopener">View dataset ↗</a></div>
+</header>
+<h2>Business questions</h2>
+<ul>
+<li>Which landing page generates a higher conversion rate and higher average spending?</li>
+<li>Which traffic sources show higher conversion rates?</li>
+<li>Are there differences in conversion by user type?</li>
+<li>What business actions are supported by the experiment results?</li>
+</ul>
+<h2>Dataset and comparison</h2>
+<p>The dataset contains <strong>40,000 observations and 9 variables</strong>. Each record represents a unique user; the dataset has no missing values. Variables include landing page version, region, device, traffic source, user type, conversion indicator and spending.</p>
+<figure><a href="../../assets/ab-landing-page-experiment.svg"><img src="../../assets/ab-landing-page-experiment.svg" alt="Comparison of conversion rates and average spending for landing pages A and B" loading="lazy"></a><figcaption>Portfolio summary of the two primary experiment outcomes.</figcaption></figure>
+<table><thead><tr><th>Metric</th><th>Page A</th><th>Page B</th><th>Interpretation</th></tr></thead><tbody>
+<tr><td>Conversion rate</td><td>12.57%</td><td>15.96%</td><td>+3.38 percentage points for Page B; statistically significant.</td></tr>
+<tr><td>Average spending among converted users</td><td>61.09</td><td>68.75</td><td>Approximately 12.5% higher for Page B; statistically significant.</td></tr>
+</tbody></table>
+<h2>Additional conversion analysis</h2>
+<table><thead><tr><th>Dimension</th><th>Observed rates</th><th>Statistical interpretation</th></tr></thead><tbody>
+<tr><td>Traffic source</td><td>Email 14.99%; Ads 14.74%; Referral 13.88%; Organic 13.79%.</td><td>Chi-square test found a statistically significant association, but Cramér's V ≈ 0.015 indicates a very weak relationship.</td></tr>
+<tr><td>User type</td><td>New users 14.36%; Returning users 14.09%.</td><td>No statistically significant association was found between user type and conversion.</td></tr>
+</tbody></table>
+<h2>Methodology and statistical tests</h2>
+<ol>
+<li>Data validation and exploratory analysis.</li>
+<li>Levene's test to assess equality of variances.</li>
+<li>Welch's t-test to compare average spending among converted users on pages A and B.</li>
+<li>Two-proportion Z-test to compare conversion rates.</li>
+<li>Chi-square tests of independence to test associations between traffic source or user type and conversion.</li>
+<li>Cramér's V to measure the strength of the traffic-source association.</li>
+</ol>
+<h2>Business recommendations</h2>
+<ul>
+<li>Prioritize Page B as the candidate version for implementation, based on its higher conversion and average spending in this experiment.</li>
+<li>Do not reallocate acquisition resources based only on traffic-source conversion rates, since the observed association is very weak.</li>
+<li>Do not prioritize different conversion strategies for new and returning users based on this experiment alone.</li>
+<li>Analyze traffic source and user type separately within each page version to check whether aggregate patterns remain stable and reduce the risk of Simpson's paradox.</li>
+<li>Complement the implementation decision with profitability and cost metrics.</li>
+</ul>
+<h2>Tools and reproducibility</h2>
+<p>Python · pandas · NumPy · Matplotlib · SciPy · statsmodels · Jupyter Notebook. The dataset is included in the repository and the notebook uses relative paths, structured to execute from top to bottom.</p>
+<div class="links">
+<a href="https://github.com/rogarzag/ab-landing-page-experiment/blob/main/ab_landing_page_experiment.ipynb" target="_blank" rel="noopener">Jupyter notebook ↗</a>
+<a href="https://github.com/rogarzag/ab-landing-page-experiment/blob/main/data/landing_experiment.csv" target="_blank" rel="noopener">Dataset CSV ↗</a>
+<a href="https://github.com/rogarzag/ab-landing-page-experiment/blob/main/README.md" target="_blank" rel="noopener">Methodology and findings ↗</a>
+</div>
+<p class="note">Statistical significance does not by itself establish business impact or profitability. Average spending is calculated among converted users. Traffic source had a statistically significant but very weak association with conversion; user type did not show a statistically significant association. Further within-page analysis is recommended before drawing conclusions about subgroup patterns.</p>
+
+<footer>
+<p><strong>Project repository</strong></p>
+<p><a class="button primary" href="https://github.com/rogarzag/ab-landing-page-experiment" target="_blank" rel="noopener">Open GitHub repository ↗</a></p>
+<div class="links"><a href="../../#projects">← Rodrigo Garza García · Selected projects</a><a href="https://github.com/rogarzag" target="_blank" rel="noopener">GitHub profile ↗</a></div>
+</footer>
+</main></body></html>
