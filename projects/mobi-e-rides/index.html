@@ -1,14 +1,59 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Mobi-e-rides Business Analysis | Rodrigo Garza García</title>
+<title>Mobi-e-rides — End-to-End Business Analysis | Rodrigo Garza García</title>
 <meta name="description" content="End-to-end Business Analysis case study for a proposed peer-to-peer bicycle and e-bike rental platform, covering stakeholders, requirements, traceability and process and system modeling.">
 <style>
-*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:#172638;font:17px/1.65 system-ui,sans-serif}main{max-width:960px;margin:auto;padding:40px 24px 72px}a{color:#087e83;text-underline-offset:4px}a:focus-visible{outline:3px solid #087e83;outline-offset:5px}header{border-bottom:1px solid #dfe6e9;padding-bottom:28px}h1{font-size:clamp(2rem,6vw,3.4rem);line-height:1.1;margin:20px 0}h2{font-size:1.65rem;line-height:1.3;margin-top:40px}h3{font-size:1.15rem}small,.meta{color:#5e6d7d}.actions{display:flex;gap:16px;flex-wrap:wrap}.button{display:inline-block;padding:10px 18px;border:1px solid #087e83;border-radius:8px;text-decoration:none;font-weight:600}table{border-collapse:collapse;width:100%;font-size:.95rem}td,th{padding:12px;text-align:left;border:1px solid #dfe6e9}th{background:#e4f3f1}figure{margin:28px 0;padding:20px;background:white;border:1px solid #dfe6e9;border-radius:12px}figure img{display:block;max-width:100%;height:auto;margin:16px auto}figure .erd{width:560px}figure .usecase{width:550px}figure .flow{width:430px}figcaption{color:#5e6d7d;font-size:.95rem}.note{font-size:.95rem}footer{margin-top:40px;border-top:1px solid #dfe6e9;padding-top:20px}@media(max-width:600px){main{padding:25px 18px}td,th{padding:8px}figure{padding:10px}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#f5f7f8;color:#172638;font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+main{max-width:1000px;margin:auto;padding:40px 24px 72px}
+a{color:#087e83;text-underline-offset:4px}
+a:hover{color:#06686c}
+a:focus-visible{outline:3px solid #087e83;outline-offset:4px;border-radius:3px}
+header{border-bottom:1px solid #dfe6e9;padding-bottom:30px}
+h1{font-size:clamp(2rem,6vw,3.3rem);line-height:1.1;margin:18px 0 12px;letter-spacing:-.025em}
+h2{font-size:1.55rem;line-height:1.3;margin:42px 0 14px}
+h3{font-size:1.12rem;margin:0 0 8px}
+p{margin:0 0 14px}
+.meta,.muted,small,figcaption{color:#5e6d7d}
+.subtitle{font-size:1.15rem;font-weight:650;margin:0 0 14px}
+.intro{font-size:1.06rem;max-width:850px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.button{display:inline-block;padding:10px 16px;border:1px solid #087e83;border-radius:8px;background:#fff;color:#087e83;text-decoration:none;font-weight:650;font-size:.93rem;line-height:1.35;transition:background .18s ease,color .18s ease,border-color .18s ease}
+.button:hover{background:#e4f3f1;color:#06686c;border-color:#06686c}
+.button.primary{background:#087e83;color:#fff;border-color:#087e83}
+.button.primary:hover{background:#06686c;color:#fff;border-color:#06686c}
+.back{font-size:.93rem;text-decoration:none}
+.metric-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:12px;margin:20px 0}
+.metric{background:#fff;border:1px solid #dfe6e9;border-radius:12px;padding:16px}
+.metric strong{display:block;font-size:1.45rem;line-height:1.2;color:#087e83;margin-bottom:5px}
+.metric span{font-size:.88rem;color:#536475}
+table{border-collapse:collapse;width:100%;font-size:.94rem;margin:16px 0 24px}
+td,th{padding:11px 13px;text-align:left;border:1px solid #dfe6e9;vertical-align:top}
+th{background:#e4f3f1;font-weight:700}
+figure{margin:22px 0;padding:18px;background:#fff;border:1px solid #dfe6e9;border-radius:12px}
+figure img{display:block;max-width:100%;max-height:650px;height:auto;margin:12px auto;object-fit:contain}
+figure a{display:block}
+figure .erd{width:560px}
+figure .usecase{width:550px}
+figure .flow{width:430px}
+figcaption{font-size:.9rem;margin-top:10px}
+.figure-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.figure-grid figure{margin:0}
+.figure-grid img{width:100%}
+ul,ol{padding-left:23px;margin:10px 0 18px}
+li{margin:5px 0}
+.note{background:#eef3f5;border-left:3px solid #8aa0ad;padding:13px 16px;border-radius:0 8px 8px 0;font-size:.93rem}
+.links{display:flex;flex-wrap:wrap;gap:10px 18px;margin:12px 0 20px}
+.links a{font-weight:650;text-decoration:none}
+.links a:hover{text-decoration:underline}
+footer{margin-top:44px;border-top:1px solid #dfe6e9;padding-top:22px}
+@media(max-width:650px){main{padding:25px 17px 56px}.figure-grid{grid-template-columns:1fr}td,th{padding:8px;font-size:.88rem}figure{padding:11px}}
 </style></head><body><main>
-<header><a href="../../#projects">← Back to selected projects</a><p class="meta">IBM Business Analysis · End-to-End Academic Case Study · November 2026 · Rodrigo Garza García</p>
-<h1>Mobi-e-rides</h1><p>End-to-End Business Analysis for a Peer-to-Peer Bicycle and eBike Rental Platform</p>
-<p>This case connects the business context and stakeholder needs with requirements definition, prioritization, traceability, and process and system modeling for a proposed rental service in Mexico City.</p>
-<div class="actions"><a class="button" href="https://github.com/rogarzag/mobi-e-rides-business-analysis" target="_blank" rel="noopener">Open GitHub repository ↗</a><a class="button" href="Mobi_e_rides_BA_Final_Project_Rodrigo_Garza.pdf">Read the full project PDF</a><a class="button" href="#models">Explore the three diagrams</a></div></header>
+<header><a class="back" href="../../#projects">← All projects</a><p class="meta">IBM Business Analysis · End-to-End Academic Case Study · November 2026 · Rodrigo Garza García</p>
+<h1>Mobi-e-rides — End-to-End Business Analysis</h1><p class="subtitle">End-to-End Business Analysis for a Peer-to-Peer Bicycle and eBike Rental Platform</p>
+<p class="intro">This case connects the business context and stakeholder needs with requirements definition, prioritization, traceability, and process and system modeling for a proposed rental service in Mexico City.</p>
+<div class="actions"><a class="button primary" href="https://github.com/rogarzag/mobi-e-rides-business-analysis" target="_blank" rel="noopener">Project repository ↗</a><a class="button" href="Mobi_e_rides_BA_Final_Project_Rodrigo_Garza.pdf">Project report (PDF) ↗</a><a class="button" href="#models">View project diagrams ↓</a></div></header>
 <h2>The business need</h2><p>Customers need to find an available bike, make a reservation and pay. Employees need to record handovers and returns and keep availability up to date. The proposed launch uses a basic booking website with employee assistance at pickup and return.</p>
 <h2>End-to-end Business Analysis scope</h2><p>The case brings together the main analysis activities needed to define a proposed solution:</p><ul><li><strong>Business understanding:</strong> define the service concept, business need and analysis scope.</li><li><strong>Stakeholder analysis:</strong> identify five stakeholder groups and consider their roles and needs.</li><li><strong>Requirements elicitation:</strong> prepare interview and survey questions and propose observation and workshop activities.</li><li><strong>Requirements analysis:</strong> define three core requirements and prioritize features using MoSCoW.</li><li><strong>Requirements management:</strong> connect the priority requirements to the corresponding models through traceability.</li><li><strong>Solution modeling:</strong> represent system interactions, core data entities and the end-to-end rental process.</li></ul><p>A three-screen prototype and further stakeholder validation are proposed as next steps.</p>
 <p class="note">This is an academic design exercise adapted from the IBM exemplar. Interviews, observations, workshops, surveys and prototype testing have not been conducted. The outputs are proposed requirements and models.</p>
@@ -18,5 +63,5 @@
 <figure><h3>UML Use Case Diagram</h3><a href="use-case.png"><img class="usecase" src="use-case.png" alt="Customer checks availability, reserves, pays and participates in return. Employee records handover and return and updates availability." loading="lazy"></a><figcaption>Two actors and six use cases. Customer and Employee both participate in return; the employee records receipt in the system. Associations show participation. <a href="use-case.png">Open full-size use case diagram</a>.</figcaption></figure>
 <figure><h3>Rental Process Flowchart</h3><a href="rental-flow.png"><img class="flow" src="rental-flow.png" alt="Select a bike and rental period, check availability, record details, pay, confirm, hand over, return and close the rental. Unavailable bikes and rejected payments lead to retry paths." loading="lazy"></a><figcaption>The proposed process includes two alternative paths: choose another bike or period, and retry payment. A rental is confirmed only after payment approval. <a href="rental-flow.png">Open full-size flowchart</a>.</figcaption></figure>
 <h2>What I would validate next</h2><p>I would review the requirements with customers and employees, clarify the handover and return information they need, and test the proposed booking journey with a simple prototype. Cancellation, refunds and detailed payment-provider integration would require further analysis.</p>
-<footer><p>Academic reference: IBM, <em>Business Analysis and Modeling for an eBike Rental Startup</em>, exemplar solution. Adapted using my stakeholder questions, requirements, priorities and models. Research and validation activities described as proposals have not been conducted.</p><p><strong>Project repository</strong></p><p><a class="button" href="https://github.com/rogarzag/mobi-e-rides-business-analysis" target="_blank" rel="noopener">Open GitHub repository ↗</a></p><a href="../../#projects">← Rodrigo Garza García · Selected projects</a></footer>
+<footer><p>Academic reference: IBM, <em>Business Analysis and Modeling for an eBike Rental Startup</em>, exemplar solution. Adapted using my stakeholder questions, requirements, priorities and models. Research and validation activities described as proposals have not been conducted.</p><p><a class="button primary" href="https://github.com/rogarzag/mobi-e-rides-business-analysis" target="_blank" rel="noopener">Project repository ↗</a></p><a href="../../#projects">← All projects</a></footer>
 </main></body></html>
