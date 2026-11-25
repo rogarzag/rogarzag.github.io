@@ -108,6 +108,11 @@
     .project { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 25px; display: flex; flex-direction: column; min-height: 100%; box-shadow: 0 10px 30px rgba(20,39,56,.045); }
     .project-media { display: block; width: 100%; height: 190px; object-fit: contain; background: #f5f8f9; border: 1px solid var(--line); border-radius: 12px; margin: 0 0 17px; }
     .project-media.diagram { background: #fff; }
+    .project-featured { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .4fr); grid-template-areas: "label label" "details preview"; align-items: center; gap: 13px 24px; }
+    .project-featured .project-top { grid-area: label; margin-bottom: 0; }
+    .project-featured .project-media { grid-area: preview; height: auto; margin-bottom: 0; }
+    .project-featured-body { grid-area: details; }
+    .project-featured-body p, .project-featured-body .result { text-align: left; }
     .engagements { margin-top: 42px; }
     .engagements h3 { margin: 0 0 16px; font-size: 1.2rem; }
     .engagement-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
@@ -180,6 +185,8 @@
       .skills { grid-template-columns: 1fr; }
       .skill-card:last-child { grid-column: auto; }
       .project-grid, .credentials-grid, .timeline, .engagement-grid, .role-list { grid-template-columns: 1fr; }
+      .project-featured { grid-template-columns: minmax(0, 1fr); grid-template-areas: "label" "preview" "details"; }
+      .project-featured .project-media { width: min(100%, 220px); justify-self: center; }
       .credential .course-pair { grid-template-columns: 1fr; }
       .engagement-card { grid-template-columns: 1fr; gap: 7px; }
       .primary-experience { grid-column: auto; }
@@ -287,8 +294,19 @@
           <p class="section-intro">Selected work in process analysis, data exploration, performance measurement, and decision-oriented reporting.</p>
         </div>
         <div class="project-grid">
+          <article class="project project-featured">
+            <div class="project-top"><span class="type">Applied Framework · Strategy &amp; Communication</span><span aria-hidden="true">01</span></div>
+            <img class="project-media diagram" width="3215" height="2821" src="projects/connecting-strategy-communication/corporate-reporting-workflow.png" alt="Corporate reporting workflow with information validation and release approval decisions" loading="lazy">
+            <div class="project-featured-body">
+              <h3>Connecting Strategy, Communication &amp; Stakeholder Engagement</h3>
+              <p>Developed an adaptable framework for translating organizational priorities into communication, stakeholder engagement and corporate reporting.</p>
+              <div class="result"><strong>Key takeaway:</strong> Two process models show how to coordinate contributors, validate information and adjust communication based on audience feedback.</div>
+              <div class="tags"><span>Strategic Communication</span><span>Stakeholder Analysis</span><span>Reporting</span><span>Process Modeling</span></div>
+              <div class="project-links"><a href="projects/connecting-strategy-communication/">View project ↗</a><a href="projects/connecting-strategy-communication/executive-overview.pdf" target="_blank" rel="noopener">Executive overview (PDF) ↗</a></div>
+            </div>
+          </article>
           <article class="project">
-            <div class="project-top"><span class="type">IBM Business Analysis · Academic Case</span><span aria-hidden="true">01</span></div>
+            <div class="project-top"><span class="type">IBM Business Analysis · Academic Case</span><span aria-hidden="true">02</span></div>
             <img class="project-media diagram" src="projects/mobi-e-rides/erd.png" alt="Mobi-e-rides entity relationship diagram linking Customer, Bike and Rental" loading="lazy">
             <h3>Mobi-e-rides — End-to-End Business Analysis</h3>
             <p>Developed an end-to-end business analysis case for a proposed bicycle and e-bike rental platform, translating stakeholder needs into prioritized requirements, traceability and solution models.</p>
@@ -297,7 +315,7 @@
             <div class="project-links"><a href="projects/mobi-e-rides/">View case study ↗</a><a href="projects/mobi-e-rides/Mobi_e_rides_BA_Final_Project_Rodrigo_Garza.pdf" target="_blank" rel="noopener">Project report (PDF) ↗</a><a href="https://github.com/rogarzag/mobi-e-rides-business-analysis" target="_blank" rel="noopener">Project repository ↗</a></div>
           </article>
           <article class="project">
-            <div class="project-top"><span class="type">IBM Business Analysis</span><span aria-hidden="true">02</span></div>
+            <div class="project-top"><span class="type">IBM Business Analysis</span><span aria-hidden="true">03</span></div>
             <img class="project-media diagram" src="https://raw.githubusercontent.com/rogarzag/business-process-mapping-quickservice-delivery/main/diagrams/QuickService%20Delivery%20%E2%80%93%20Order%20Management%20Process%20Flowchart.png" alt="QuickService Delivery order management process flowchart created in Lucidchart" loading="lazy">
             <h3>QuickService Delivery — Process Mapping</h3>
             <p>Mapped a food and grocery delivery order from placement to fulfillment, clarifying five participants, handoffs, decision points and exception paths.</p>
@@ -306,7 +324,7 @@
             <div class="project-links"><a href="projects/quickservice-delivery/">View case study ↗</a><a href="https://github.com/rogarzag/business-process-mapping-quickservice-delivery" target="_blank" rel="noopener">Project repository ↗</a><a href="https://lucid.app/lucidchart/36c1ae40-1a47-4819-805f-63889a5205e3/edit?viewport_loc=-957%2C873%2C2289%2C1675%2C0_0&invitationId=inv_33bdba97-f296-4e62-a267-c171659295b9" target="_blank" rel="noopener">Lucidchart diagram ↗</a></div>
           </article>
           <article class="project">
-            <div class="project-top"><span class="type">IBM Business Analysis</span><span aria-hidden="true">03</span></div>
+            <div class="project-top"><span class="type">IBM Business Analysis</span><span aria-hidden="true">04</span></div>
             <img class="project-media diagram" src="https://raw.githubusercontent.com/rogarzag/business-analysis-use-case-modeling/main/diagrams/news-channel-use-case-original.png" alt="News Channel Program UML use case diagram created in Lucidchart" loading="lazy">
             <h3>News Channel Program — UML Use Case Modeling</h3>
             <p>Defined the scope of a prime-time news program through five actors, six use cases and their associations in a UML diagram.</p>
@@ -315,7 +333,7 @@
             <div class="project-links"><a href="projects/news-channel-program/">View case study ↗</a><a href="https://github.com/rogarzag/business-analysis-use-case-modeling" target="_blank" rel="noopener">Project repository ↗</a><a href="https://lucid.app/lucidchart/7390e644-b2a4-4605-9f86-4769b1048ace/edit?viewport_loc=-1254%2C-430%2C3877%2C2181%2C0_0&invitationId=inv_35b30263-e9a3-411a-b19a-b6acc66fbd94" target="_blank" rel="noopener">Lucidchart diagram ↗</a></div>
           </article>
           <article class="project">
-            <div class="project-top"><span class="type">TripleTen · Data Analytics</span><span aria-hidden="true">04</span></div>
+            <div class="project-top"><span class="type">TripleTen · Data Analytics</span><span aria-hidden="true">05</span></div>
             <img class="project-media" src="https://raw.githubusercontent.com/rogarzag/rappiplus-business-performance-analysis/main/images/executive_overview.png" alt="RappiPlus executive business performance dashboard" loading="lazy">
             <h3>RappiPlus — Business Performance Analysis</h3>
             <p>Combined data-quality review, product-level profitability, funnel and retention analysis, and checkout A/B testing using Python, SQL, statistical testing and Tableau.</p>
@@ -324,7 +342,7 @@
             <div class="project-links"><a href="projects/rappiplus/">View case study ↗</a><a href="https://github.com/rogarzag/rappiplus-business-performance-analysis" target="_blank" rel="noopener">Project repository ↗</a><a href="https://public.tableau.com/views/RappiPlusBusinessPerformanceDashboard/RappiPlusBusinessPerformanceStory?:language=es-ES&:display_count=n&:origin=viz_share_link" target="_blank" rel="noopener">Tableau dashboard ↗</a></div>
           </article>
           <article class="project">
-            <div class="project-top"><span class="type">TripleTen · Data Analytics</span><span aria-hidden="true">05</span></div>
+            <div class="project-top"><span class="type">TripleTen · Data Analytics</span><span aria-hidden="true">06</span></div>
             <img class="project-media" src="https://raw.githubusercontent.com/rogarzag/andes-capital-real-estate-analysis/main/images/executive-overview.png" alt="Andes Capital executive real estate dashboard" loading="lazy">
             <h3>Andes Capital — Real Estate Sales Analysis</h3>
             <p>Analyzed 8,500 real estate sales across 2023–2024, comparing revenue, property types, sales channels, geography and customer cohorts.</p>
@@ -333,7 +351,7 @@
             <div class="project-links"><a href="projects/andes-capital/">View case study ↗</a><a href="https://github.com/rogarzag/andes-capital-real-estate-analysis" target="_blank" rel="noopener">Project repository ↗</a><a href="https://public.tableau.com/views/AndesCapitalRealEstateDashboard/AndesCapitalRealEstateAnalysis?:language=es-ES&:display_count=n&:origin=viz_share_link" target="_blank" rel="noopener">Tableau dashboard ↗</a></div>
           </article>
           <article class="project">
-            <div class="project-top"><span class="type">TripleTen · Data Analytics</span><span aria-hidden="true">06</span></div>
+            <div class="project-top"><span class="type">TripleTen · Data Analytics</span><span aria-hidden="true">07</span></div>
             <img class="project-media" src="https://raw.githubusercontent.com/rogarzag/andes-retail-commercial-performance/main/Overview.png" alt="Andes Retail commercial performance dashboard overview" loading="lazy">
             <h3>Andes Retail — Commercial Performance Analysis</h3>
             <p>Compared 2024–2025 revenue, margin, orders, customer segments, products, geography and seasonality to identify changes in commercial performance.</p>
@@ -342,7 +360,7 @@
             <div class="project-links"><a href="projects/andes-retail/">View case study ↗</a><a href="https://github.com/rogarzag/andes-retail-commercial-performance" target="_blank" rel="noopener">Project repository ↗</a><a href="https://public.tableau.com/app/profile/rodrigo.garza.garcia/viz/Andes_Retail_Commercial_Performance_2024_2025/Dashboard-Overview" target="_blank" rel="noopener">Tableau dashboard ↗</a></div>
           </article>
           <article class="project">
-            <div class="project-top"><span class="type">TripleTen · Data Analytics</span><span aria-hidden="true">07</span></div>
+            <div class="project-top"><span class="type">TripleTen · Data Analytics</span><span aria-hidden="true">08</span></div>
             <img class="project-media" src="https://raw.githubusercontent.com/rogarzag/mercadolibre-funnel-retention-analysis/main/images/01_executive_summary.png" alt="MercadoLibre conversion funnel and retention analysis executive summary" loading="lazy">
             <h3>MercadoLibre — Funnel &amp; Retention Analysis</h3>
             <p>Used SQL to assess conversion-funnel performance and D7–D28 retention across ten Latin American countries and compare customer cohorts.</p>
@@ -351,22 +369,13 @@
             <div class="project-links"><a href="projects/mercadolibre/">View case study ↗</a><a href="https://github.com/rogarzag/mercadolibre-funnel-retention-analysis" target="_blank" rel="noopener">Project repository ↗</a><a href="https://docs.google.com/spreadsheets/d/1j0Ln3y3g58qErGPMvOTCVIhawGD_T5hNhAE8IP0xCd0/edit?usp=drive_link" target="_blank" rel="noopener">Analysis workbook ↗</a></div>
           </article>
           <article class="project">
-            <div class="project-top"><span class="type">TripleTen · Data Analytics</span><span aria-hidden="true">08</span></div>
+            <div class="project-top"><span class="type">TripleTen · Data Analytics</span><span aria-hidden="true">09</span></div>
             <img class="project-media" src="assets/ab-landing-page-experiment.svg" alt="Comparison of conversion rates and average spending for Page A and Page B in a landing page A/B experiment" loading="lazy">
             <h3>A/B Landing Page — Experiment Analysis</h3>
             <p>Evaluated two landing page versions across 40,000 users, comparing conversion, spending and associations with traffic source and user type.</p>
             <div class="result"><strong>Key takeaway:</strong> Page B had higher conversion (15.96% vs. 12.57%) and spending among converted users. Traffic source's association with conversion was statistically significant but very weak.</div>
             <div class="tags"><span>Python</span><span>A/B Testing</span><span>Hypothesis Testing</span><span>Conversion Analysis</span></div>
             <div class="project-links"><a href="projects/ab-landing-page/">View case study ↗</a><a href="https://github.com/rogarzag/ab-landing-page-experiment" target="_blank" rel="noopener">Project repository ↗</a><a href="https://github.com/rogarzag/ab-landing-page-experiment/blob/main/ab_landing_page_experiment.ipynb" target="_blank" rel="noopener">Analysis notebook ↗</a></div>
-          </article>
-          <article class="project">
-            <div class="project-top"><span class="type">Applied Framework · Strategy &amp; Communication</span><span aria-hidden="true">09</span></div>
-            <img class="project-media diagram" src="projects/connecting-strategy-communication/corporate-reporting-workflow.png" alt="Corporate reporting workflow with information validation and release approval decisions" loading="lazy">
-            <h3>Connecting Strategy, Communication &amp; Stakeholder Engagement</h3>
-            <p>Developed an adaptable framework for translating organizational priorities into communication, stakeholder engagement and corporate reporting.</p>
-            <div class="result"><strong>Key takeaway:</strong> Two process models show how to coordinate contributors, validate information and adjust communication based on audience feedback.</div>
-            <div class="tags"><span>Strategic Communication</span><span>Stakeholder Analysis</span><span>Reporting</span><span>Process Modeling</span></div>
-            <div class="project-links"><a href="projects/connecting-strategy-communication/">View project ↗</a><a href="projects/connecting-strategy-communication/executive-overview.pdf" target="_blank" rel="noopener">Executive overview (PDF) ↗</a></div>
           </article>
         </div>
         <p style="margin:22px 0 0;color:#617181;font-size:.9rem">More analytical work is available on <a href="https://github.com/rogarzag" target="_blank" rel="noopener" style="color:#087e83;font-weight:700">GitHub ↗</a> and <a href="https://public.tableau.com/app/profile/rodrigo.garza.garcia" target="_blank" rel="noopener" style="color:#087e83;font-weight:700">Tableau Public ↗</a>.</p>
